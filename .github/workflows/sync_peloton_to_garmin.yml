@@ -32,7 +32,7 @@ jobs:
 
     - name: 🗃 Create config file
       env:
-        DEFAULT_WORKOUT_NUM: 5
+        DEFAULT_WORKOUT_NUM: 15
       run: |
         cat <<EOT > /app/configuration.local.json 
         {
@@ -84,7 +84,7 @@ jobs:
         P2G_PELOTON__PASSWORD: ${{ secrets.P2G_PELOTON__PASSWORD }}
         P2G_GARMIN__EMAIL: ${{ secrets.P2G_GARMIN__EMAIL }}
         P2G_GARMIN__PASSWORD: ${{ secrets.P2G_GARMIN__PASSWORD }}
-        TZ: America/Chicago
+        TZ: America/Los_Angeles
 
     - name: 💾 Save to output directory
       # saveLocalCopy can be set when workflow action is manually run otherwise it's always skipped 
